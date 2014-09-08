@@ -1,0 +1,245 @@
+/*---------------------------------*\
+          Configs
+\*---------------------------------*/
+/* color */
+/*---------------------------------*\
+          Container&&Sidebar
+\*---------------------------------*/
+/* line 19, ../sass/screen.scss */
+* {
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
+/* line 25, ../sass/screen.scss */
+body {
+  background-image: url(../images/bg/notebook.png);
+  margin: 0;
+  width: 100%;
+  height: 100%;
+}
+
+/* line 32, ../sass/screen.scss */
+#sidebar {
+  text-align: center;
+  background: #333;
+  height: 100%;
+  position: fixed;
+  z-index: 22;
+  width: 300px;
+  top: 0;
+  left: 0;
+  /* reset semantic's style*/
+  margin: 0;
+  padding: 0;
+}
+/* line 44, ../sass/screen.scss */
+#sidebar h1 {
+  font-weight: 600;
+  color: rgba(255, 255, 255, 0.8);
+}
+/* line 48, ../sass/screen.scss */
+#sidebar #description {
+  color: rgba(255, 255, 255, 0.8);
+}
+/* line 51, ../sass/screen.scss */
+#sidebar #divider {
+  margin: 0 auto;
+  width: 200px;
+}
+/* line 55, ../sass/screen.scss */
+#sidebar #footer {
+  width: 100%;
+  margin: 0 auto;
+  position: absolute;
+  bottom: 10px;
+}
+
+/* line 63, ../sass/screen.scss */
+#container {
+  position: relative;
+  width: auto;
+  overflow: hidden;
+  height: 100%;
+  margin: 0;
+  margin-left: 300px;
+}
+
+/* line 72, ../sass/screen.scss */
+.pagination {
+  display: none;
+}
+
+/*---------------------------------*\
+          Avatar
+\*---------------------------------*/
+/* line 79, ../sass/screen.scss */
+#avatar {
+  margin: 0 auto;
+  margin-top: 50px;
+}
+
+/*---------------------------------*\
+          isotope
+\*---------------------------------*/
+/* line 87, ../sass/screen.scss */
+#isotope-content {
+  width: 100%;
+  margin: 10px 0;
+  z-index: 0;
+}
+
+/*---------------------------------*\
+          item
+\*---------------------------------*/
+/* line 99, ../sass/screen.scss */
+.post-item {
+  width: 100%;
+  margin: 10px 0 10px 20px !important;
+}
+/* line 103, ../sass/screen.scss */
+.post-item h3 {
+  font-size: 15px;
+  font-weight: 600;
+  margin: 0;
+}
+/* line 109, ../sass/screen.scss */
+.post-item a {
+  color: #A8A5A3;
+  text-decoration: none;
+  outline: none;
+}
+
+/*---------------------------------*\
+          post
+\*---------------------------------*/
+/* line 120, ../sass/screen.scss */
+.post_container {
+  position: relative;
+  width: auto;
+  margin: 0;
+  overflow: hidden;
+  margin-left: 300px;
+  margin-right: 300px;
+  height: 100%;
+  font-size: 18px;
+  line-height: 1.5;
+  overflow-x: hidden;
+  overflow-y: auto;
+  -webkit-overflow-scrolling: touch;
+}
+/* line 137, ../sass/screen.scss */
+.post_container .post {
+  margin-left: 25px;
+  margin-right: 25px;
+}
+/* line 141, ../sass/screen.scss */
+.post_container ::selection {
+  text-shadow: none;
+}
+/* line 146, ../sass/screen.scss */
+.post_container ::-moz-selection {
+  text-shadow: none;
+}
+@media screen and (max-width: 300px) {
+  /* line 120, ../sass/screen.scss */
+  .post_container {
+    font-size: 14px;
+  }
+}
+
+/* line 156, ../sass/screen.scss */
+h1, h2, h3, h4, h5, h6 {
+  font-weight: 400;
+}
+
+/* line 160, ../sass/screen.scss */
+.post__title {
+  margin: 0;
+  padding-top: 1.1em;
+  font-size: 2em;
+}
+
+/* line 167, ../sass/screen.scss */
+.post__content > p, .post__content > ul, .post__content > ol {
+  margin-top: 1.5em;
+  margin-bottom: 1.5em;
+}
+/* line 171, ../sass/screen.scss */
+.post__content > ol > li {
+  margin: .5em 0;
+}
+/* line 174, ../sass/screen.scss */
+.post__content li > p {
+  margin: 0;
+}
+/* line 177, ../sass/screen.scss */
+.post__content a {
+  word-break: break-all;
+}
+/* line 179, ../sass/screen.scss */
+.post__content a:hover {
+  text-decoration: underline;
+}
+/* line 183, ../sass/screen.scss */
+.post__content img {
+  max-width: 100%;
+  max-height: 500px;
+  border-radius: 5px;
+}
+
+/* line 191, ../sass/screen.scss */
+strong {
+  font-weight: 600;
+}
+
+/* line 194, ../sass/screen.scss */
+blockquote {
+  margin: 1.5em 0 1.5em 2em;
+  padding-left: .5em;
+}
+
+/* line 199, ../sass/screen.scss */
+kbd {
+  padding: .2em .3em .1em;
+  font-size: .75em;
+  font-family: Consolas, Monaco, 'Andale Mono', monospace;
+  background: white;
+  background: -webkit-linear-gradient(left, #f6f4f4, white, #f6f4f4);
+  background: -moz-linear-gradient(left, #f6f4f4, white, #f6f4f4);
+  background: -ms-linear-gradient(left, #f6f4f4, white, #f6f4f4);
+  background: -o-linear-gradient(left, #f6f4f4, white, #f6f4f4);
+  background: linear-gradient(left, #f6f4f4, white, #f6f4f4);
+  border-color: #fbfaf9 #f0eeed #e1dfdf;
+  border-width: .25em .3em .4em;
+  border-style: solid;
+  border-radius: .25em;
+  vertical-align: .3em;
+}
+
+/* line 215, ../sass/screen.scss */
+iframe {
+  margin-top: 1.5em;
+}
+@media screen and (max-width: 300px) {
+  /* line 215, ../sass/screen.scss */
+  iframe {
+    height: 260px;
+  }
+}
+
+/*---------------------------------*\
+          comment
+\*---------------------------------*/
+/* line 227, ../sass/screen.scss */
+.comment_container {
+  z-index: 22;
+  width: 300px;
+  position: fixed;
+  right: 0;
+  top: 0;
+  height: 100%;
+  background: #333;
+  overflow-y: auto;
+}

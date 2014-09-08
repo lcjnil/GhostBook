@@ -1,0 +1,21 @@
+{
+  "name": "my-theme",
+  "version": "0.0.0",
+  "authors": [
+    "lcj <emlcjnil@gmail.com>"
+  ],
+  "license": "MIT",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "jquery": "~2.1.1",
+    "semantic": "~0.19.1",
+    "isotope": "~2.0.1",
+    "jquery-infinite-scroll": "paulirish/infinite-scroll#~2.0.2"
+  }
+}

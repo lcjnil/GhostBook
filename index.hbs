@@ -1,0 +1,20 @@
+{{!< default}}
+{{! The tag above means - insert everything in this file into the {body} of the default.hbs template }}
+
+{{! The big featured header }}
+<div id="container">
+  <div id="isotope-content">
+
+      {{#foreach posts}}
+        <div class="ui piled segment post-item">
+          <h3><a href="{{url}}">{{title}}</a></h3>
+          <div class="ui divider"></div>
+          <p>{{excerpt characters="140"}} ... <a href="{{url}}">read more</a></p>
+          <div class="ui divider"></div>
+          <i class="ui calendar icon"></i><span>{{date format="MM.DD"}}</span>
+        </div>
+      {{/foreach}}
+  </div>
+
+  {{pagination}}
+</div>

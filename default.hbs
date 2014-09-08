@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html>
+<head>
+    {{! Document Settings }}
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+
+    {{! Page Meta }}
+  <title>{{meta_title}}</title>
+  <meta name="description" content="{{meta_description}}" />
+
+  <meta name="HandheldFriendly" content="True" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+  <link rel="shortcut icon" href="{{asset "favicon.ico"}}">
+
+    {{! Styles'n'Scripts }}
+  <link rel="stylesheet" type="text/css" href="{{asset "bower_components/semantic/build/packaged/css/semantic.min.css"}}"/>
+  <link rel="stylesheet" type="text/css" href="{{asset "css/screen.css"}}" />
+    {{! Ghost outputs important style and meta data with this tag }}
+    {{ghost_head}}
+</head>
+<body class="{{body_class}}">
+
+{{! Everything else gets inserted here }}
+<div id="main_container">
+  <aside id="sidebar">
+    <img src="{{@blog.logo}}" class="ui circular image" id="avatar"/>
+    <h1 class="ui center aligned header">{{@blog.title}}</h1>
+
+    <div class="ui horizontal icon divider" id="divider">
+      <i class="circular inverted heart icon"></i>
+    </div>
+    <p id="description">{{@blog.description}}</p>
+
+    <div id="footer">
+        <p>copyright</p>
+    </div>
+  </aside>
+
+  {{{body}}}
+</div>
+
+
+{{! Ghost outputs important scripts and data with this tag }}
+{{ghost_foot}}
+
+{{! The main JavaScript file for Casper }}
+<script src="{{asset "bower_components/jquery/dist/jquery.min.js"}}"></script>
+<script src="{{asset "bower_components/isotope/dist/isotope.pkgd.min.js"}}"></script>
+<script src="{{asset "bower_components/jquery-infinite-scroll/jquery.infinitescroll.min.js"}}"></script>
+
+<script src="{{asset "js/main.js"}}"></script>
+</body>
+</html>

@@ -1,0 +1,236 @@
+/*---------------------------------*\
+          Configs
+\*---------------------------------*/
+
+/* color */
+$sidebar-color: #333;
+$sidebar-title-color: rgba(255,255,255,.8);
+$container-color: #E7D69E;
+
+$sidebar-width: 300px;
+
+@mixin center {
+  margin: 0 auto;
+}
+
+/*---------------------------------*\
+          Container&&Sidebar
+\*---------------------------------*/
+* {
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
+body {
+  background-image: url(../images/bg/notebook.png);
+  margin: 0;
+  width: 100%;
+  height: 100%;
+}
+
+#sidebar {
+  text-align: center;
+  background: $sidebar-color;
+  height: 100%;
+  position: fixed;
+  z-index: 22;
+  width: $sidebar-width;
+  top: 0;
+  left: 0;
+  /* reset semantic's style*/
+  margin: 0;
+  padding: 0;
+  h1 {
+    font-weight: 600;
+    color: $sidebar-title-color;
+  }
+  #description {
+    color: $sidebar-title-color;
+  }
+  #divider {
+    @include center;
+    width: 200px;
+  }
+  #footer {
+    width: 100%;
+    @include center;
+    position: absolute;
+    bottom: 10px;
+  }
+}
+
+#container {
+  position: relative;
+  width: auto;
+  overflow: hidden;
+  height: 100%;
+  margin: 0;
+  margin-left: $sidebar-width;
+}
+
+.pagination {
+  display: none;
+}
+/*---------------------------------*\
+          Avatar
+\*---------------------------------*/
+
+#avatar {
+  @include center;
+  margin-top: 50px;
+}
+
+/*---------------------------------*\
+          isotope
+\*---------------------------------*/
+#isotope-content {
+  width:100%;
+  margin:10px 0;
+  z-index:0;
+//  visibility: hidden;
+}
+
+/*---------------------------------*\
+          item
+\*---------------------------------*/
+
+//TODO: fixed !important
+.post-item {
+  width: 100%;
+  margin: 10px 0 10px 20px!important;
+
+  h3 {
+    font-size: 15px;
+    font-weight: 600;
+    margin: 0;
+  }
+
+  a {
+    color: #A8A5A3;
+    text-decoration: none;
+    outline: none;
+  }
+
+}
+
+/*---------------------------------*\
+          post
+\*---------------------------------*/
+.post_container {
+  position: relative;
+  width: auto;
+  margin: 0;
+  overflow: hidden;
+  margin-left: $sidebar-width;
+  margin-right: $sidebar-width;
+
+  height: 100%;
+//  color: $post-fg;
+  font-size: 18px;
+  line-height: 1.5;
+//  background: $post-bg;
+  overflow-x: hidden;
+  overflow-y: auto;
+  -webkit-overflow-scrolling: touch;
+
+  .post {
+    margin-left: 25px;
+    margin-right: 25px;
+  }
+  ::selection {
+//    color: $selection-fg;
+//    background:  $selection-bg;
+    text-shadow: none;
+  }
+  ::-moz-selection {
+//    color: $selection-fg;
+//    background:  $selection-bg;
+    text-shadow: none;
+  }
+  @media screen and (max-width: $sidebar-width) {
+    font-size: 14px;
+  }
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-weight: 400;
+}
+
+.post__title {
+  margin: 0;
+  padding-top: 1.1em;
+  font-size: 2em;
+}
+
+.post__content {
+  > p, > ul, > ol {
+    margin-top: 1.5em;
+    margin-bottom: 1.5em;
+  }
+  > ol > li {
+    margin: .5em 0;
+  }
+  li > p {
+    margin: 0;
+  }
+  a {
+    word-break: break-all;
+    &:hover {
+      text-decoration: underline;
+    }
+  }
+  img {
+    max-width: 100%;
+    max-height: 500px;
+//    border: 2px solid ;
+    border-radius: 5px;
+  }
+}
+
+strong {
+  font-weight: 600;
+}
+blockquote {
+  margin: 1.5em 0 1.5em 2em;
+  padding-left: .5em;
+//  border-left: 5px solid $blockquote-bd;
+}
+kbd {
+  padding: .2em .3em .1em;
+  font-size: .75em;
+  font-family: Consolas, Monaco, 'Andale Mono', monospace;
+  background: white;
+  background: -webkit-linear-gradient(left, #f6f4f4, white, #f6f4f4);
+  background: -moz-linear-gradient(left, #f6f4f4, white, #f6f4f4);
+  background: -ms-linear-gradient(left, #f6f4f4, white, #f6f4f4);
+  background: -o-linear-gradient(left, #f6f4f4, white, #f6f4f4);
+  background: linear-gradient(left, #f6f4f4, white, #f6f4f4);
+  border-color: #fbfaf9 #f0eeed #e1dfdf;
+  border-width: .25em .3em .4em;
+  border-style: solid;
+  border-radius: .25em;
+  vertical-align: .3em;
+}
+iframe {
+  margin-top: 1.5em;
+  @media screen and (max-width: $sidebar-width) {
+    height: 260px;
+  }
+}
+
+/*---------------------------------*\
+          comment
+\*---------------------------------*/
+
+
+.comment_container {
+  z-index: 22;
+  width: 300px;
+  position: fixed;
+  right: 0;
+  top: 0;
+  height: 100%;
+  background: $sidebar-color;
+  overflow-y: auto;
+}
