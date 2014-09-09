@@ -66,10 +66,40 @@ var app = {
     var maxpage = $(".page-number").text().replace('Page 1 of ', '');
     return maxpage;
   },
+  eventInit: function() {
+    $('.ribbon').click(function(){
+      if (!$('#person').is('.moveIn-person')) {
+        $('#person').removeClass('moveOut-person');
+        $('#person').addClass('moveIn-person');
+        $('#container').fadeOut(1500, function() {
+          $('#person').addClass('overflow');
+        });
+
+      } else {
+        $('#person').removeClass('moveIn-person');
+        $('#person').addClass('moveOut-person');
+        $('#container').fadeIn(1000);
+        app.reloadIsotope();
+        $('#person').removeClass('overflow');
+      }
+    });
+
+    $('.ribbon').hover(function(){
+      if (!$('#person').is('.moveIn-person')) {
+        $(this).addClass('hover_up');
+      } else {
+        $(this).addClass('hover_down');
+      }
+    }, function() {
+      $(this).removeClass('hover_up');
+      $(this).removeClass('hover_down');
+    });
+  },
   init: function() {
     app.formatWidth();
     app.isotopeSetup();
     app.infiniteScrollSetup();
+    app.eventInit();
   }
 };
 

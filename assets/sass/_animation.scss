@@ -1,0 +1,32 @@
+/*---------------------------------*\
+          define
+\*---------------------------------*/
+@-webkit-keyframes moveIn-person {
+  to {
+    top: 0px;
+  }
+}
+
+@-webkit-keyframes moveOut-person {
+  from {
+    top: 0;
+  }
+  to {
+    top: -100%;
+  }
+}
+/*---------------------------------*\
+          class
+\*---------------------------------*/
+.moveIn-person {
+  @include animation-name(moveIn-person);
+  @include animation-duration(2s);
+  @include animation-fill-mode(forwards);
+  @include animation-timing-function(cubic-bezier(0.03, 0.71, 0.48, 1));
+}
+.moveOut-person {
+  @include animation-name(moveOut-person);
+  @include animation-duration(2s);
+  @include animation-fill-mode(forwards);
+  @include animation-timing-function(cubic-bezier(0.03, 0.71, 0.48, 1));
+}

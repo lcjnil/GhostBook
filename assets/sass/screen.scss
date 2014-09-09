@@ -1,3 +1,6 @@
+@import "compass/css3";
+@import "_animation.scss";
+
 /*---------------------------------*\
           Configs
 \*---------------------------------*/
@@ -115,7 +118,7 @@ body {
 }
 
 /*---------------------------------*\
-          post
+          post content
 \*---------------------------------*/
 .post_container {
   position: relative;
@@ -191,10 +194,12 @@ h1, h2, h3, h4, h5, h6 {
 strong {
   font-weight: 600;
 }
+
+//TODO fix border color
 blockquote {
   margin: 1.5em 0 1.5em 2em;
   padding-left: .5em;
-//  border-left: 5px solid $blockquote-bd;
+  border-left: 5px solid grey;
 }
 kbd {
   padding: .2em .3em .1em;
@@ -233,4 +238,68 @@ iframe {
   height: 100%;
   background: $sidebar-color;
   overflow-y: auto;
+}
+
+/*---------------------------------*\
+          person
+\*---------------------------------*/
+#person {
+  height: 100%;
+  position: absolute;
+  z-index: 10;
+  background: url(../images/bg/notebook-2.gif);
+  width: 100%;
+  top:-100%;
+  
+  &.overflow {
+    overflow-y: hidden;
+  }
+}
+
+#person_container {
+  margin-left: $sidebar-width +30px;
+}
+/*---------------------------------*\
+          ribbon
+\*---------------------------------*/
+$ribbon_width: 70px;
+$ribbon_height: 120px;
+
+.ribbon{
+  @include appearance(none);
+  @include border-radius(5px 5px 0px 0px);
+  @include transition(all 0.2s ease);
+  position: absolute;
+  bottom: -20px;
+  right: 200px;
+  cursor: pointer;
+  border: none;
+  width: $ribbon_width;
+  height: $ribbon_height;
+  color: white;
+  padding: 0.033 * $ribbon_width;
+  margin-right: -0.13 * $ribbon_width;
+  -webkit-filter: drop-shadow(0 1px 10px rgba(0,0,0,.5));
+  -moz-filter: drop-shadow(0 1px 10px rgba(0,0,0,.5));
+  -ms-filter: drop-shadow(0 1px 10px rgba(0,0,0,.5));
+  -o-filter: drop-shadow(0 1px 10px rgba(0,0,0,.5));
+  filter: drop-shadow(0 1px 10px rgba(0,0,0,.5));
+
+  @include transition(bottom 1s);
+
+  &.hover_up{
+    color:white;
+    bottom: -120px;
+  }
+  &.hover_down{
+    color:white;
+    bottom: 0px;
+  }
+
+}
+.red{
+  background:#c4302b;
+  color: darken(#c4302b, 20%);
+  &::after{border-top-color: #c4302b}
+  &::before{border-top-color: #c4302b}
 }
